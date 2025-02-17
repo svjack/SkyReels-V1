@@ -98,9 +98,10 @@ When sufficient VRAM is available (e.g., on A800), the lossless version can be r
 **Note: When generating videos, the prompt should start with "FPS-24, " as we referenced the controlling the fps training method from <a href=https://ai.meta.com/research/publications/movie-gen-a-cast-of-media-foundation-models>Moviegen</a> during training.**
 
 ```shell
-SkyReelsModel = ${SkyReelsModel}
+SkyReelsModel = "Skywork/SkyReels-V1"
 python3 video_generate.py \
     --model_id ${SkyReelsModel} \
+    --task_type t2v \
     --guidance_scale 6.0 \
     --height 544 \
     --width 960 \
@@ -114,7 +115,7 @@ python3 video_generate.py \
 We list the height/width/frame settings we recommend in the following table.
 |      Resolution       |           h/w=9:16           |    h/w=16:9     |     h/w=1:1     |
 |:---------------------:|:----------------------------:|:---------------:|:---------------:|
-|         540p          |        544px960px97f        |  960px544px97f |  720px720px97f |
+|         544p          |        544px960px97f        |  960px544px97f |  720px720px97f |
 
 #### Using Command Line
 
@@ -123,9 +124,11 @@ We list the height/width/frame settings we recommend in the following table.
 # offload: Enable offload model
 # high_cpu_memory: Enable pinned memory to reduce the overhead of model offloading.
 # parameters_level: Further reduce GPU VRAM usage.
-SkyReelsModel = "Skywork/SkyReels-V1-Hunyuan-T2V"
+# task_type:The task type is designated to support both t2v and i2v. For the execution of an i2v task, it is necessary to input --image.
+SkyReelsModel = "Skywork/SkyReels-V1"
 python3 video_generate.py \
     --model_id ${SkyReelsModel} \
+    --task_type t2v \
     --guidance_scale 6.0 \
     --height 544 \
     --width 960 \
@@ -162,7 +165,7 @@ python3 video_generate.py \
 
 ## Performance Comparison
 
-This test aims to compare the end-to-end latency of SkyReelsInfer and HunyuanVideo XDiT for 544p video processing on both the A800 (high-performance computing GPU) and RTX 4090 (consumer-grade GPU). The results will demonstrate the superior inference performance of SkyReelsInferin terms of speed and efficiency.
+This test aims to compare the end-to-end latency of SkyReelsInfer and HunyuanVideo XDiT for 544p video processing on both the A800 (high-performance computing GPU) and RTX 4090 (consumer-grade GPU). The results will demonstrate the superior inference performance of SkyReelsInfer in terms of speed and efficiency.
 
 ### Testing Parameters
 
