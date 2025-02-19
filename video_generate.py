@@ -1,5 +1,7 @@
 import argparse
 import os
+import time
+import random
 
 from diffusers.utils import export_to_video
 from diffusers.utils import load_image
@@ -44,6 +46,10 @@ if __name__ == "__main__":
 
     if args.task_type == "i2v":
         image = load_image(args.image)
+    
+    if args.seed == -1:
+        random.seed(time.time())
+        args.seed = int(random.randrange(4294967294))
 
     predictor = SkyReelsVideoInfer(
         task_type=TaskType.I2V if args.task_type == "i2v" else TaskType.T2V,
