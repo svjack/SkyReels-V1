@@ -86,7 +86,7 @@ cd skyreelsinfer
 
 ### Installation Guide for Linux
 
-We recommend CUDA versions 12.2 for the manual installation.
+We recommend Python 3.10 and CUDA version 12.2 for the manual installation.
 
 ```shell
 # Install pip dependencies
