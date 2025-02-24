@@ -4,6 +4,37 @@
 
 # SkyReels V1: Human-Centric Video Foundation Model
 
+```bash
+python video_generate.py \
+    --model_id Skywork/SkyReels-V1-Hunyuan-T2V \
+    --task_type t2v \
+    --guidance_scale 6.0 \
+    --height 544 \
+    --width 960 \
+    --num_frames 97 \
+    --prompt "FPS-24, A cat wearing sunglasses and working as a lifeguard at a pool" \
+    --embedded_guidance_scale 1.0 \
+    --quant \
+    --offload \
+    --high_cpu_memory \
+    --parameters_level
+
+python video_generate.py \
+    --model_id Skywork/SkyReels-V1-Hunyuan-I2V \
+    --image Cat_Pool.webp \
+    --task_type i2v \
+    --guidance_scale 6.0 \
+    --height 544 \
+    --width 960 \
+    --num_frames 97 \
+    --prompt "FPS-24, A cat wearing sunglasses and working as a lifeguard at a pool" \
+    --embedded_guidance_scale 1.0 \
+    --quant \
+    --offload \
+    --high_cpu_memory \
+    --parameters_level
+```
+
 <p align="center">
 🤗 <a href="https://huggingface.co/collections/Skywork/skyreels-v1-67b34676ff65b4ec02d16307" target="_blank">Hugging Face</a> · 👋 <a href="https://www.skyreels.ai/" target="_blank">Playground</a>
 </p>
