@@ -31,6 +31,12 @@ python video_generate.py \
     --parameters_level
 ```
 
+
+https://github.com/user-attachments/assets/eca73d17-4130-4462-95ab-38b7a12b2bf1
+
+
+
+
 - I2V
 
 ```bash
