@@ -5,6 +5,17 @@
 # SkyReels V1: Human-Centric Video Foundation Model
 
 ```bash
+sudo apt-get update && sudo apt-get install git-lfs ffmpeg cbm
+
+git clone https://github.com/svjack/SkyReels-V1 && cd SkyReels-V1
+conda install python=3.10
+pip install ipykernel
+pip install -r requirements.txt
+```
+
+- T2V
+
+```bash
 python video_generate.py \
     --model_id Skywork/SkyReels-V1-Hunyuan-T2V \
     --task_type t2v \
@@ -18,7 +29,11 @@ python video_generate.py \
     --offload \
     --high_cpu_memory \
     --parameters_level
+```
 
+- I2V
+
+```bash
 python video_generate.py \
     --model_id Skywork/SkyReels-V1-Hunyuan-I2V \
     --image Cat_Pool.webp \
