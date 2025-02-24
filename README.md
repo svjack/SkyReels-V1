@@ -35,9 +35,10 @@ python video_generate.py \
 https://github.com/user-attachments/assets/eca73d17-4130-4462-95ab-38b7a12b2bf1
 
 
-
-
 - I2V
+
+- Ref Image
+![Cat_Pool](https://github.com/user-attachments/assets/e9bb1a41-5092-4401-bb79-38e12923f5a3)
 
 ```bash
 python video_generate.py \
@@ -55,6 +56,12 @@ python video_generate.py \
     --high_cpu_memory \
     --parameters_level
 ```
+
+
+
+
+https://github.com/user-attachments/assets/1df5406c-5432-4995-bde6-4bfece78d6d2
+
 
 <p align="center">
 🤗 <a href="https://huggingface.co/collections/Skywork/skyreels-v1-67b34676ff65b4ec02d16307" target="_blank">Hugging Face</a> · 👋 <a href="https://www.skyreels.ai/" target="_blank">Playground</a>
